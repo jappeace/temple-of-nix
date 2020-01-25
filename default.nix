@@ -10,12 +10,8 @@ pkgs.stdenv.mkDerivation {
   name = "hello-world";
   src = builtins.fetchurl "https://jappieklooster.nl";
   args = ["-e" ./builder.sh];
-  buildInputs = [pkgs.curl (pkgs.ii.overrideDerivation (oldAttrs: {
+  buildInputs = [pkgs.curl (pkgs.ii.overrideAttrs (oldAttrs: {
     patches =  [ scrollback ];
-    buildInputs = oldAttrs.buildInputs ++ [ pkgs.openssl ];
-
-    postPatch = ''
-        sed -i -e 's|APG_CLIBS += -lcrypt|APG_CLIBS += -L${pkgs.openssl.out}/lib -lcrypto|' Makefile
-    '';
+    buildInputs = [ pkgs.openssl ];
   }))];
 }
