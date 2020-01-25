@@ -4,7 +4,7 @@ pinnedPkgs =
     # Descriptive name to make the store path easier to identify
     name = "nixos-pin-19.10.2019";
     url = https://github.com/nixos/nixpkgs/;
-    rev = "f203d50d09052792866f926e7c2d3b3bf76d3388";
+    rev = "7b97c8c0c8c450bcce24113d9a2bf2bfff1b75c9";
     }) ;
 in
 import pinnedPkgs {
