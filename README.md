@@ -1,3 +1,5 @@
+[![Jappiejappie](https://img.shields.io/badge/twitch.tv-jappiejappie-purple?logo=twitch)](https://www.twitch.tv/jappiejappie)
+
 > run, run before it\'s too late.
 
 This is a twitch chatbot that is written in the nix programming langauge.
